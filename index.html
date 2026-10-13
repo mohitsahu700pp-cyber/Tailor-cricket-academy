@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#07150f">
+<meta name="description" content="Tailor Cricket Academy & Ground, Sanganer, Jaipur">
+<title>Tailor Cricket Academy & Ground | Jaipur</title>
+
+<style>
+:root {
+  --bg: #07150f;
+  --panel: #0d2118;
+  --green: #b7f34a;
+  --cream: #f4f2e8;
+  --muted: #aab9ad;
+  --line: rgba(255,255,255,.13);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--cream);
+  font-family: Inter, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+
+button, input, textarea, select { font: inherit; }
+
+.wrap {
+  width: min(1160px, 92%);
+  margin: auto;
+}
+
+nav {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  z-index: 5;
+  background: rgba(7,21,15,.95);
+  padding: 12px 4%;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 900;
+  letter-spacing: .04em;
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  background: var(--green);
+  display: grid;
+  place-items: center;
+  color: #0a170e;
+  font-size: 24px;
+}
+
+.brand small {
+  display: block;
+  color: var(--muted);
+  font-size: 10px;
+  letter-spacing: .2em;
+  margin-top: 3px;
+}
+
+.navlinks {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.navlinks a:hover { color: var(--green); }
+
+.navcta, .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 13px 19px;
+  border-radius: 999px;
+  background: var(--green);
+  color: #0a170e;
+  font-weight: 850;
+  border: 0;
+  cursor: pointer;
+  transition: .25s;
+}
+
+.navcta:hover, .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px #b7f34a25;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--cream);
+}
+
+.menu {
+  display: none;
+  background: none;
+  border: 1px solid var(--line);
+  color: white;
+  border-radius: 10px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 680px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 38px;
+  padding: 65px 0 75px;
+  position: relative;
+}
+
+.hero:before {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: #8bca3820;
+  filter: blur(100px);
+  top: 30px;
+  left: -200px;
+  pointer-events: none;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid #b7f34a54;
+  color: var(--green);
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  background: var(--green);
+  border-radius: 50%;
+  box-shadow: 0 0 12px var(--green);
+}
+
+h1 {
+  font-size: clamp(48px, 6.2vw, 82px);
+  line-height: .98;
+  letter-spacing: -.065em;
+  margin: 24px 0 22px;
+  font-weight: 950;
+}
+
+h1 span { color: var(--green); }
+
+.hero p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 520px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.hero-proof {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 35px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.rating {
+  font-size: 22px;
+  color: var(--cream);
+  font-weight: 900;
+}
+
+.stars {
+  color: var(--green);
+  letter-spacing: 2px;
+}
+
+.hero-visual {
+  position: relative;
+  min-height: 500px;
+  border-radius: 28px;
+  overflow: hidden;
+  border: 1px solid #ffffff20;
+  background: #183423;
+}
+
+.hero-visual img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  inset: 0;
+  opacity: .85;
+}
+
+.hero-visual:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 25%,
+    #07150fdf 100%
+  );
+}
+
+.visual-label {
+  position: absolute;
+  z-index: 1;
+  left: 25px;
+  right: 25px;
+  bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 15px;
+}
+
+.visual-label strong {
+  font-size: 24px;
+  display: block;
+}
+
+.visual-label small { color: #c7d3c9; }
+
+.floating-tag {
+  position: absolute;
+  z-index: 2;
+  top: 22px;
+  left: 22px;
+  background: #07150fdd;
+  border: 1px solid var(--line);
+  padding: 12px 15px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+.floating-tag b {
+  color: var(--green);
+  display: block;
+  font-size: 17px;
+}
+
+.ball {
+  position: absolute;
+  z-index: 2;
+  right: 10px;
+  top: 36%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 32% 25%, #ffb4a3, #c93227 45%, #6d130e 80%);
+  box-shadow: 0 22px 45px #0008;
+  animation: float 5s ease-in-out infinite;
+}
+
+.ball:before, .ball:after {
+  content: "";
+  position: absolute;
+  border: 2px dashed #f7d4c9;
+  border-radius: 50%;
+  width: 24px;
+  height: 85px;
+  top: -3px;
+  left: 27px;
+  transform: rotate(25deg);
+}
+
+.ball:after { transform: rotate(-25deg); }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-15px) rotate(10deg); }
+}
+
+/* STATS */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  overflow: hidden;
+  background: #0a1b12;
+}
+
+.stat {
+  padding: 25px 20px;
+  text-align: center;
+  border-right: 1px solid var(--line);
+}
+
+.stat:last-child { border: 0; }
+
+.stat strong {
+  font-size: 29px;
+  display: block;
+}
+
+.stat span {
+  font-size: 12px;
+  color: var(--muted);
+  display: block;
+  margin-top: 5px;
+}
+
+/* SECTIONS */
+
+section { padding: 90px 0; }
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.kicker {
+  font-size: 11px;
+  color: var(--green);
+  font-weight: 900;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: clamp(34px, 4vw, 54px);
+  line-height: 1.03;
+  letter-spacing: -.05em;
+  margin: 13px 0 0;
+}
+
+.section-head p {
+  color: var(--muted);
+  line-height: 1.75;
+  max-width: 430px;
+  margin: 0;
+}
+
+/* FACILITIES */
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.feature {
+  background: linear-gradient(145deg, #10271a, #0a1b12);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 28px;
+  min-height: 225px;
+  transition: transform .25s, border-color .25s;
+}
+
+.feature:hover {
+  transform: translateY(-7px);
+  border-color: #b7f34a70;
+}
+
+.feature-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  background: #b7f34a17;
+  color: var(--green);
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+.feature h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+}
+
+.feature p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+/* ABOUT */
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.about-image {
+  height: 440px;
+  border-radius: 25px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--line);
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-image:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, #07150fbd, transparent 60%);
+}
+
+.image-caption {
+  position: absolute;
+  z-index: 1;
+  bottom: 24px;
+  left: 24px;
+  font-weight: 850;
+  font-size: 23px;
+}
+
+.about-copy p {
+  color: var(--muted);
+  line-height: 1.85;
+}
+
+.checklist {
+  display: grid;
+  gap: 13px;
+  margin: 25px 0;
+}
+
+.check {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.check i {
+  font-style: normal;
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  background: #b7f34a20;
+  color: var(--green);
+  border-radius: 50%;
+}
+
+.check span { font-size: 14px; }
+
+/* CALL TO ACTION */
+
+.quote {
+  border: 1px solid var(--line);
+  border-radius: 25px;
+  padding: 38px;
+  background: linear-gradient(120deg, #10271a, #0b1b12);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 30px;
+  align-items: center;
+}
+
+.quote h2 { max-width: 700px; }
+
+.quote p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.quote .btn { white-space: nowrap; }
+
+/* CONTACT */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 25px;
+}
+
+.contact-info, .contact-form {
+  background: #0b1d13;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 30px;
+}
+
+.contact-info h3, .contact-form h3 {
+  font-size: 23px;
+  margin: 0 0 10px;
+}
+
+.contact-info > p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.info-row {
+  display: flex;
+  gap: 14px;
+  padding: 17px 0;
+  border-top: 1px solid var(--line);
+}
+
+.info-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #b7f34a16;
+  color: var(--green);
+  flex-shrink: 0;
+}
+
+.info-row small {
+  color: var(--muted);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.info-row strong {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.field {
+  display: grid;
+  gap: 7px;
+  margin-bottom: 14px;
+}
+
+.field label {
+  font-size: 12px;
+  color: #c9d5ca;
+}
+
+.field input, .field textarea, .field select {
+  width: 100%;
+  padding: 13px 14px;
+  background: #07150f;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  color: white;
+  outline: none;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+  border-color: var(--green);
+}
+
+.field textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.contact-form .btn { width: 100%; }
+
+.fineprint {
+  font-size: 11px;
+  color: #839488;
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* FOOTER & ANIMATIONS */
+
+footer {
+  padding: 30px 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .7s, transform .7s;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobile-cta { display: none; }
+
+/* TABLET */
+
+@media(max-width:850px) {
+  .navlinks {
+    display: none;
+    position: absolute;
+    top: 81px;
+    left: 0;
+    right: 0;
+    padding: 20px 4%;
+    background: #07150f;
+    border-bottom: 1px solid var(--line);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+  }
+
+  .navlinks.open { display: flex; }
+  .menu { display: block; }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 50px;
+    gap: 30px;
+  }
+
+  .hero-visual { min-height: 410px; }
+
+  .stats { grid-template-columns: repeat(2, 1fr); }
+
+  .stat:nth-child(2) { border-right: 0; }
+
+  .stat:nth-child(-n+2) {
+    border-bottom: 1px solid var(--line);
+  }
+
+  .features { grid-template-columns: 1fr 1fr; }
+
+  .about {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .section-head { display: block; }
+
+  .section-head p { margin-top: 18px; }
+
+  .contact-grid { grid-template-columns: 1fr; }
+
+  .quote { grid-template-columns: 1fr; }
+
+  .quote .btn { justify-self: start; }
+}
+
+/* MOBILE */
+
+@media(max-width:520px) {
+  nav { min-height: 72px; }
+
+  .brand { font-size: 13px; }
+
+  .logo {
+    width: 39px;
+    height: 39px;
+  }
+
+  .navlinks { top: 71px; }
+
+  .hero {
+    padding: 43px 0 50px;
+    min-height: auto;
+  }
+
+  .hero h1 { font-size: 52px; }
+
+  .hero p { font-size: 15px; }
+
+  .hero-visual { min-height: 350px; }
+
+  .floating-tag {
+    top: 14px;
+    left: 14px;
+  }
+
+  .visual-label {
+    left: 17px;
+    right: 17px;
+    bottom: 17px;
+  }
+
+  .visual-label strong { font-size: 20px; }
+
+  .stats .stat { padding: 20px 10px; }
+
+  .stat strong { font-size: 25px; }
+
+  section { padding: 70px 0; }
+
+  .features { grid-template-columns: 1fr; }
+
+  .feature { min-height: auto; }
+
+  .about-image { height: 310px; }
+
+  .quote { padding: 25px; }
+
+  .contact-info, .contact-form { padding: 23px; }
+
+  .form-row { grid-template-columns: 1fr; }
+
+  .footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .mobile-cta {
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    bottom: 12px;
+    left: 4%;
+    right: 4%;
+    padding: 8px;
+    background: #07150fee;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+  }
+
+  .mobile-cta a {
+    flex: 1;
+    text-align: center;
+    padding: 11px;
+    font-size: 13px;
+    font-weight: 850;
+  }
+
+  .mobile-cta a:first-child { color: var(--green); }
+
+  body { padding-bottom: 65px; }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a class="brand" href="#home">
+    <span class="logo">🏏</span>
+    <span>TAILOR CRICKET
+      <small>ACADEMY & GROUND</small>
+    </span>
+  </a>
+
+  <div class="navlinks" id="navlinks">
+    <a href="#about">About</a>
+    <a href="#facilities">Facilities</a>
+    <a href="#reviews">Reviews</a>
+    <a href="#contact">Contact</a>
+    <a class="navcta" href="#contact">Enquire Now ↗</a>
+  </div>
+
+  <button class="menu" id="menu" aria-label="Open navigation">☰</button>
+</nav>
+
+<main>
+
+<!-- HERO SECTION -->
+
+<section class="wrap hero" id="home">
+
+  <div class="hero-copy reveal">
+    <div class="eyebrow">
+      <span class="dot"></span>
+      YOUR GAME. YOUR GROUND.
+    </div>
+
+    <h1>Built for the<br><span>love of</span> cricket.</h1>
+
+    <p>
+      A place to practise, compete, and grow. Welcome to
+      Tailor Cricket Academy & Ground in Sanganer, Jaipur —
+      where cricket lovers come together for the game.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn" href="#contact">Enquire About Practice ↗</a>
+
+      <a class="btn secondary"
+         href="https://www.google.com/maps/search/?api=1&query=Tailor+Cricket+Academy+Ground+Sanganer+Jaipur"
+         target="_blank" rel="noopener">
+         Get Directions ↗
+      </a>
+    </div>
+
+    <div class="hero-proof">
+      <div>
+        <div class="rating">4.8 <span class="stars">★★★★★</span></div>
+        <div>Rated by local cricket lovers</div>
+      </div>
+
+      <div style="height:36px;border-left:1px solid var(--line)"></div>
+
+      <div>
+        <strong style="color:var(--cream)">76 reviews</strong>
+        <br>Google listing rating
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual reveal">
+    <img
+      src="https://images.unsplash.com/photo-1531415074968-036ba1b575da?auto=format&fit=crop&w=1400&q=85"
+      alt="Cricket match on a green field">
+
+    <div class="floating-tag">
+      <b>PLAY • LEARN • IMPROVE</b>
+      Every ball is a new opportunity
+    </div>
+
+    <div class="ball" aria-hidden="true"></div>
+
+    <div class="visual-label">
+      <div>
+        <strong>TAILOR CRICKET GROUND</strong>
+        <small>Sanganer, Jaipur, Rajasthan</small>
+      </div>
+      <span style="font-size:30px">↗</span>
+    </div>
+  </div>
+
+</section>
+
+<!-- STATS -->
+
+<div class="wrap stats reveal">
+  <div class="stat">
+    <strong>4.8<span style="color:var(--green);display:inline;font-size:18px">★</span></strong>
+    <span>Google rating</span>
+  </div>
+
+  <div class="stat">
+    <strong>76</strong>
+    <span>Public reviews</span>
+  </div>
+
+  <div class="stat">
+    <strong>🏏</strong>
+    <span>Practice & matches</span>
+  </div>
+
+  <div class="stat">
+    <strong>8 PM</strong>
+    <span>Listed closing time*</span>
+  </div>
+</div>
+
+<!-- FACILITIES -->
+
+<section id="facilities">
+  <div class="wrap">
+
+    <div class="section-head reveal">
+      <div>
+        <div class="kicker">The cricket experience</div>
+        <h2>More than a ground.<br>A place to grow.</h2>
+      </div>
+
+      <p>
+        Whether you're sharpening your skills or getting your
+        team ready for a match, make every session count in a
+        cricket-focused environment.
+      </p>
+    </div>
+
+    <div class="features">
+
+      <article class="feature reveal">
+        <div class="feature-icon">🏟️</div>
+        <h3>Spacious Outfield</h3>
+        <p>A large outfield for match play, fielding practice,
+        and enjoying the game with your team.</p>
+      </article>
+
+      <article class="feature reveal">
+        <div class="feature-icon">🎯</div>
+        <h3>Practice & Skill Building</h3>
+        <p>Make time for batting, bowling, and fielding practice
+        while working steadily on your game.</p>
+      </article>
+
+      <article class="feature reveal">
+        <div class="feature-icon">🏏</div>
+        <h3>Pitch & Match Environment</h3>
+        <p>Reviews highlight the pitch and a welcoming environment
+        for practice sessions and cricket matches.</p>
+      </article>
+
+      <article class="feature reveal">
+        <div class="feature-icon">🧑‍🏫</div>
+        <h3>Coaching Support</h3>
+        <p>Visitors praise the supportive coaching staff and
+        personal attention given to player development.</p>
+      </article>
+
+      <article class="feature reveal">
+        <div class="feature-icon">💧</div>
+        <h3>Player Comfort</h3>
+        <p>Visitor reviews mention drinking water and canteen
+        facilities to help make time at the ground easier.</p>
+      </article>
+
+      <article class="feature reveal">
+        <div class="feature-icon">🤝</div>
+        <h3>Cricket Community</h3>
+        <p>A place to bring teammates, enjoy the sport, learn
+        from others, and keep the love of cricket alive.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+
+<section id="about"
+ style="background:#0a1a11;border-block:1px solid var(--line)">
+
+  <div class="wrap about">
+
+    <div class="about-image reveal">
+      <img
+        src="https://images.unsplash.com/photo-1593766827228-8737b3cd1472?auto=format&fit=crop&w=1200&q=85"
+        alt="Cricket players practising on a field">
+
+      <div class="image-caption">
+        Every great innings starts somewhere.
+      </div>
+    </div>
+
+    <div class="about-copy reveal">
+      <div class="kicker">Welcome to TCG</div>
+
+      <h2>Bring your passion.<br>Play your game.</h2>
+
+      <p>
+        Tailor Cricket Academy & Ground is located on
+        Jotda-Wala Marg, Shikarpura Road near Haldhighati Gate
+        in Sanganer, Jaipur. The ground is appreciated by
+        visitors for its outfield, pitch, supportive coaching,
+        and facilities.
+      </p>
+
+      <p>
+        Come with your questions, find out about current
+        practice options, and take the next step in your
+        cricket journey.
+      </p>
+
+      <div class="checklist">
+        <div class="check">
+          <i>✓</i>
+          <span>Ground for cricket practice and matches</span>
+        </div>
+
+        <div class="check">
+          <i>✓</i>
+          <span>Coaching support mentioned in visitor reviews</span>
+        </div>
+
+        <div class="check">
+          <i>✓</i>
+          <span>Canteen and drinking water noted by visitors</span>
+        </div>
+      </div>
+
+      <a class="btn" href="#contact">Plan Your Visit ↗</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- REVIEWS -->
+
+<section id="reviews">
+  <div class="wrap">
+
+    <div class="section-head reveal">
+      <div>
+        <div class="kicker">From the cricket community</div>
+        <h2>Good cricket.<br>Good people.</h2>
+      </div>
+
+      <p>
+        Public reviews praise the ground's playing environment,
+        facilities, and the support offered by the staff.
+      </p>
+    </div>
+
+    <div class="features">
+
+      <article class="feature reveal">
+        <div class="stars">★★★★★</div>
+
+        <p style="color:var(--cream);font-size:16px;margin:17px 0">
+          “Perfect ground for cricket lovers! Big outfield,
+          clean surroundings, and a great atmosphere for
+          matches and practice.”
+        </p>
+
+        <span style="font-size:12px;color:var(--muted)">
+          — Sourabh Sharma · Public review
+        </span>
+      </article>
+
+      <article class="feature reveal">
+        <div class="stars">★★★★★</div>
+
+        <p style="color:var(--cream);font-size:16px;margin:17px 0">
+          “All required facilities available, like ground staff,
+          canteen, drinking water etc.”
+        </p>
+
+        <span style="font-size:12px;color:var(--muted)">
+          — Piyush Sharma · Public review
+        </span>
+      </article>
+
+      <article class="feature reveal">
+        <div class="stars">★★★★★</div>
+
+        <p style="color:var(--cream);font-size:16px;margin:17px 0">
+          Visitors have also highlighted supportive coaches
+          and personal attention to batting, bowling, and
+          fielding skills.
+        </p>
+
+        <span style="font-size:12px;color:var(--muted)">
+          — Summary of visitor feedback
+        </span>
+      </article>
+
+    </div>
+
+    <p style="font-size:11px;color:#819286;margin-top:15px">
+      Review excerpts are adapted from the information provided.
+      Please confirm current facilities and coaching availability
+      directly with the academy.
+    </p>
+
+  </div>
+</section>
+
+<!-- CALL TO ACTION -->
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="quote reveal">
+
+      <div>
+        <div class="kicker">Ready to play?</div>
+        <h2>Your next cricket session starts here.</h2>
+
+        <p>
+          Call the ground to ask about coaching, practice slots,
+          match bookings, fees, and availability.
+        </p>
+      </div>
+
+      <a class="btn" href="tel:+917665909360">
+        Call the Academy ↗
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" style="padding-top:40px">
+  <div class="wrap">
+
+    <div class="section-head reveal">
+      <div>
+        <div class="kicker">Find your way to the ground</div>
+        <h2>Let's talk cricket.</h2>
+      </div>
+
+      <p>
+        Contact the academy directly for the latest timings,
+        coaching batches, fees, and ground availability.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-info reveal">
+        <h3>Visit Tailor Cricket Ground</h3>
+
+        <p>
+          Drop by or call ahead before travelling. The listing
+          currently shows a closing time of 8:00 PM; timings
+          may change.
+        </p>
+
+        <div class="info-row">
+          <div class="info-icon">📍</div>
+          <div>
+            <small>ADDRESS</small>
+            <strong>
+              Jotda-Wala Marg, Shikarpura Rd,<br>
+              Haldhighati Gate, Sanganer, Jaipur,<br>
+              Rajasthan 302029
+            </strong>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-icon">☎</div>
+          <div>
+            <small>PHONE</small>
+            <strong>
+              <a href="tel:+917665909360">076659 09360</a>
+            </strong>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-icon">🕗</div>
+          <div>
+            <small>LISTED HOURS</small>
+            <strong>Open · Closes 8:00 PM*</strong>
+          </div>
+        </div>
+
+        <a class="btn"
+           style="width:100%;margin-top:20px"
+           href="https://www.google.com/maps/search/?api=1&query=QQHV%2B75+Jaipur+Rajasthan"
+           target="_blank" rel="noopener">
+          Open in Google Maps ↗
+        </a>
+      </div>
+
+      <!-- WORKING WHATSAPP ENQUIRY FORM -->
+
+      <form class="contact-form reveal" id="enquiry">
+        <h3>Send an enquiry</h3>
+
+        <p style="color:var(--muted);font-size:13px;margin:0 0 23px">
+          Fill this in to prepare a message for the academy on WhatsApp.
+        </p>
+
+        <div class="form-row">
+          <div class="field">
+            <label for="name">Your name *</label>
+            <input id="name" name="name"
+                   required placeholder="Enter your name">
+          </div>
+
+          <div class="field">
+            <label for="phone">Your phone (optional)</label>
+            <input id="phone" name="phone"
+                   inputmode="tel" placeholder="Your number">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="interest">What are you interested in? *</label>
+
+          <select id="interest" name="interest" required>
+            <option value="">Choose an enquiry</option>
+            <option>Cricket coaching</option>
+            <option>Ground booking for a match</option>
+            <option>Practice session</option>
+            <option>Fees and timings</option>
+            <option>Other enquiry</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="message">Message (optional)</label>
+          <textarea id="message" name="message"
+            placeholder="Tell us what you'd like to know..."></textarea>
+        </div>
+
+        <button class="btn" type="submit">
+          Continue on WhatsApp ↗
+        </button>
+
+        <div class="fineprint">
+          This opens WhatsApp with your message prepared.
+          Review and send it yourself.
+        </div>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="wrap footer-inner">
+
+    <div class="brand">
+      <span class="logo">🏏</span>
+      <span>TAILOR CRICKET
+        <small>ACADEMY & GROUND</small>
+      </span>
+    </div>
+
+    <div>Made for the love of cricket · Sanganer, Jaipur</div>
+
+    <div>
+      © <span id="year"></span> Tailor Cricket Academy
+    </div>
+
+  </div>
+</footer>
+
+<!-- MOBILE QUICK ACTIONS -->
+
+<div class="mobile-cta">
+  <a href="tel:+917665909360">☎ Call Now</a>
+  <a href="#contact">Enquire ↗</a>
+</div>
+
+<script>
+/* MOBILE NAVIGATION */
+
+const menu = document.getElementById('menu');
+const links = document.getElementById('navlinks');
+
+menu.addEventListener('click', () => {
+  links.classList.toggle('open');
+
+  menu.textContent =
+    links.classList.contains('open') ? '✕' : '☰';
+});
+
+links.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    links.classList.remove('open');
+    menu.textContent = '☰';
+  });
+});
+
+/* CURRENT YEAR */
+
+document.getElementById('year').textContent =
+  new Date().getFullYear();
+
+/* SCROLL REVEAL ANIMATIONS */
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal').forEach(element => {
+  observer.observe(element);
+});
+
+/* WHATSAPP ENQUIRY FORM */
+
+document.getElementById('enquiry').addEventListener('submit', event => {
+  event.preventDefault();
+
+  const name =
+    document.getElementById('name').value.trim();
+
+  const phone =
+    document.getElementById('phone').value.trim();
+
+  const interest =
+    document.getElementById('interest').value;
+
+  const message =
+    document.getElementById('message').value.trim();
+
+  const text =
+    `Hello Tailor Cricket Academy & Ground!\n\n` +
+    `My name: ${name}\n` +
+    `Phone: ${phone || 'Not provided'}\n` +
+    `Enquiry: ${interest}\n` +
+    `Message: ${message || 'Please share more details.'}`;
+
+  const whatsappURL =
+    'https://wa.me/917665909360?text=' +
+    encodeURIComponent(text);
+
+  window.open(whatsappURL, '_blank', 'noopener,noreferrer');
+});
+</script>
+
+</body>
+</html>
